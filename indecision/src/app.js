@@ -1,8 +1,14 @@
-// //JSX JavaScript XML
+// JSX JavaScript XML
+
+var app = {
+  title: "Indecision",
+  subtitle: "Put your life in the hands of a computer"
+};
+
 var template = (
   <div>
-    <h1>Indecision App</h1>
-    <p>This is some info</p>
+    <h1>{app.title}</h1>
+    <p>{app.subtitle}</p>
     <ol>
       <li>Item</li>
       <li>Item</li>
