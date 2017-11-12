@@ -10,7 +10,7 @@ const onFormSubmit = (e) => {
   const option = e.target.elements.option.value;
   if (option) {
     app.options.push(option);
-    e.target.elements.option.value = '';
+    e.target.elements.option.value = "";
     render();
   };
 };
@@ -31,8 +31,9 @@ const render = () => {
       <p>{app.options.length}</p>
       <button onClick={removeOptions}>Remove All</button>
       <ol>
-        <li>Item</li>
-        <li>Item</li>
+        {
+          app.options.map((option) => <li key={option}>{option}</li>)
+        }
       </ol>
       <form onSubmit={onFormSubmit}>
         <input type="text" name="option"/>

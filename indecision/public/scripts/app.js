@@ -12,7 +12,7 @@ var onFormSubmit = function onFormSubmit(e) {
   var option = e.target.elements.option.value;
   if (option) {
     app.options.push(option);
-    e.target.elements.option.value = '';
+    e.target.elements.option.value = "";
     render();
   };
 };
@@ -56,16 +56,13 @@ var render = function render() {
     React.createElement(
       "ol",
       null,
-      React.createElement(
-        "li",
-        null,
-        "Item"
-      ),
-      React.createElement(
-        "li",
-        null,
-        "Item"
-      )
+      app.options.map(function (option) {
+        return React.createElement(
+          "li",
+          { key: option },
+          option
+        );
+      })
     ),
     React.createElement(
       "form",
