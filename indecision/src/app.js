@@ -1,6 +1,5 @@
-import subtract, { square, add } from './utils.js'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log('app.js is running');
-console.log(square(4));
-console.log(add(1,2));
-console.log(subtract(3,2));
+const template = React.createElement('p', {}, 'Test');
+ReactDOM.render(template, document.getElementById('app'));
